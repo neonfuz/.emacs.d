@@ -1,0 +1,9 @@
+
+# Cache or personal files
+/eshell/
+/tramp
+/kkcrc
+/auto-save-list
+
+# Too big to include
+/elpa/
