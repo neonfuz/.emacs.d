@@ -1,8 +1,8 @@
 (setq-default c-default-style "bsd"
-			  c-basic-offset 4
-			  tab-width 4
-			  indent-tabs-mode nil
-			  js-indent-level 2
+              c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil
+              js-indent-level 4
               show-trailing-whitespace t)
 
 (add-to-list 'default-frame-alist '(font . "PragmataPro-10" ))
@@ -45,7 +45,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-			 '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
@@ -67,23 +67,23 @@
 
 
 ;; Helm stuff
-;(require 'helm-config)
-;(helm-mode 1)
-;(define-key global-map [remap find-file] 'helm-find-files)
-;(define-key global-map [remap occur] 'helm-occur)
-;(define-key global-map [remap list-buffers] 'helm-buffers-list)
-;(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-;(global-set-key (kbd "M-x") 'helm-M-x)
-;(unless (boundp 'completion-in-region-function)
-;  (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
-;  (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
-;(add-hook 'kill-emacs-hook #'(lambda () (and (file-exists-p "/tmp/helm-cfg.el") (delete-file "/tmp/helm-cfg.el"))))
+;;(require 'helm-config)
+;;(helm-mode 1)
+;;(define-key global-map [remap find-file] 'helm-find-files)
+;;(define-key global-map [remap occur] 'helm-occur)
+;;(define-key global-map [remap list-buffers] 'helm-buffers-list)
+;;(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+;;(global-set-key (kbd "M-x") 'helm-M-x)
+;;(unless (boundp 'completion-in-region-function)
+;;  (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
+;;  (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
+;;(add-hook 'kill-emacs-hook #'(lambda () (and (file-exists-p "/tmp/helm-cfg.el") (delete-file "/tmp/helm-cfg.el"))))
 
 
 ;; Key chords
-;(require 'key-chord)
-;(key-chord-mode 1)
-;(key-chord-define-global "hj" 'undo)
+;;(require 'key-chord)
+;;(key-chord-mode 1)
+;;(key-chord-define-global "hj" 'undo)
 
 (defun eval-and-replace ()
   "Replace the preceding sexp with its value."
