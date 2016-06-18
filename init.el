@@ -2,7 +2,7 @@
               c-basic-offset 4
               tab-width 4
               indent-tabs-mode nil
-              js-indent-level 4
+              js-indent-level 2
               show-trailing-whitespace t)
 
 (add-to-list 'default-frame-alist '(font . "PragmataPro-10" ))
@@ -66,6 +66,22 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+(setq web-mode-engines-alist
+      '(("ctemplate" . "\\.html\\'"))
+)
+
+(setq web-mode-markup-indent-offset 2)
+
 ;; Helm stuff
 ;;(require 'helm-config)
 ;;(helm-mode 1)
@@ -96,3 +112,23 @@
            (insert (current-kill 0)))))
 
 (global-set-key (kbd "C-c e") 'eval-and-replace)
+
+
+(defun delete-current-file ()
+  "Delete the file associated with the current buffer and close the buffer.
+Also push file content to `kill-ring'.
+If buffer is not file, just close it, and push file content to `kill-ring'.
+
+URL `http://ergoemacs.org/emacs/elisp_delete-current-file.html'
+Version 2015-08-12"
+  (interactive)
+  (progn
+    (kill-new (buffer-string))
+    (when (buffer-file-name)
+      (when (file-exists-p (buffer-file-name))
+        (progn
+          (delete-file (buffer-file-name))
+          (message "Deleted: 「%s」." (buffer-file-name)))))
+    (let ((buffer-offer-save nil))
+      (set-buffer-modified-p nil)
+      (kill-buffer (current-buffer)))))
