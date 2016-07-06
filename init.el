@@ -42,7 +42,6 @@
  '(trailing-whitespace ((t (:background "dim gray")))))
 (put 'downcase-region 'disabled nil)
 
-
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -65,6 +64,8 @@
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
+(require 'editorconfig)
+(editorconfig-mode 1)
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
