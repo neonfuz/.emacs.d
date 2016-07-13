@@ -83,6 +83,16 @@
 
 (setq web-mode-markup-indent-offset 2)
 
+(require 'org-install)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (sqlite . t)
+   (perl . t)
+   ))
+
 ;; Helm stuff
 ;;(require 'helm-config)
 ;;(helm-mode 1)
