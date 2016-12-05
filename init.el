@@ -33,7 +33,10 @@
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(custom-enabled-themes (quote (misterioso)))
  '(ecb-options-version "2.40")
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (cyberpunk-theme git-gutter-fringe+ yasnippet weechat web-mode w3m toml-mode scss-mode sass-mode php-mode origami org-beautify-theme ob-browser mkdown markdown-preview-mode magit lorem-ipsum key-chord js-comint iedit helm ghc gh-md emmet-mode elm-mode editorconfig ecb csharp-mode auto-complete adaptive-wrap ace-jump-mode))))
 
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
