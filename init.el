@@ -5,8 +5,10 @@
               js-indent-level 2
               show-trailing-whitespace t)
 
-(add-to-list 'default-frame-alist '(font . "PragmataPro-10" ))
-;;(set-face-attribute 'default t :font "PragmataPro-10" )
+(add-to-list 'default-frame-alist '(font . "M+ 1m-10" ))
+
+(set-fontset-font t 'japanese-jisx0208 "M+ 1m")
+;;(set-fontset-font t 'japanese-jisx0212 "M+ 1m") ; unneeded?
 
 ;;(icomplete-mode 99)
 (column-number-mode t)
