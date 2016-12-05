@@ -76,6 +76,8 @@
 (require 'git-gutter+)
 (global-git-gutter+-mode)
 
+(require 'elm-mode)
+
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
