@@ -72,6 +72,10 @@
 (require 'editorconfig)
 (editorconfig-mode 1)
 
+;; Git gutter
+(require 'git-gutter+)
+(global-git-gutter+-mode)
+
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
