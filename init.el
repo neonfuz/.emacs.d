@@ -36,7 +36,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (cyberpunk-theme git-gutter-fringe+ yasnippet weechat web-mode w3m toml-mode scss-mode sass-mode php-mode origami org-beautify-theme ob-browser mkdown markdown-preview-mode magit lorem-ipsum key-chord js-comint iedit helm ghc gh-md emmet-mode elm-mode editorconfig ecb csharp-mode auto-complete adaptive-wrap ace-jump-mode))))
+    (exec-path-from-shell cyberpunk-theme git-gutter-fringe+ yasnippet weechat web-mode w3m toml-mode scss-mode sass-mode php-mode origami org-beautify-theme ob-browser mkdown markdown-preview-mode magit lorem-ipsum key-chord js-comint iedit helm ghc gh-md emmet-mode elm-mode editorconfig ecb csharp-mode auto-complete adaptive-wrap ace-jump-mode))))
 
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
@@ -103,6 +103,8 @@
    (sqlite . t)
    (perl . t)
    ))
+
+(exec-path-from-shell-initialize)
 
 ;; Helm stuff
 ;;(require 'helm-config)
